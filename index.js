@@ -173,7 +173,9 @@ app.put("/hod/:id/deny/:leave_id", async (req, res) => {
   res.redirect(`/hod/${req.params.id}/pending_leaves`);
 });
 //==================================================
-app.listen(3000, () => {
+const port = process.env.PORT || 5000;
+
+app.listen(port, () => {
   console.log("Server Running on port : 3000");
 });
 
