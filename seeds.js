@@ -2,11 +2,14 @@ const mongoose = require("mongoose");
 const Professor = require("./models/professor");
 const HOD = require("./models/hod");
 mongoose
-  .connect("mongodb://localhost:27017/leave_management_system", {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useCreateIndex: true,
-  })
+  .connect(
+    "mongodb+srv://rohith:Redi@123@leavemanagementsystem.lysvs.mongodb.net/leave_management_system?retryWrites=true&w=majority",
+    {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+      useCreateIndex: true,
+    }
+  )
   .then(() =>
     console.log("Connection to DB leave_management_system successfull")
   )
@@ -57,10 +60,10 @@ Professor.insertMany(professors)
 //============================================
 const HODData = [
   {
-    uid: "comp",
-    password: "comp@123",
-    fname: "comp",
-    lname: "HOD",
+    uid: "varundhawan",
+    password: "varun@123",
+    fname: "Varun",
+    lname: "Dhawan",
     phone_number: 7888866666,
     department: "COMP",
     address: "Pune, Maharashtra",
@@ -68,10 +71,10 @@ const HODData = [
     leaves: [],
   },
   {
-    uid: "it",
-    password: "it@123",
-    fname: "it",
-    lname: "HOD",
+    uid: "arjitsingh",
+    password: "arjit@123",
+    fname: "arjit",
+    lname: "singh",
     phone_number: 7888866666,
     department: "IT",
     address: "Pune, Maharashtra",
@@ -79,10 +82,10 @@ const HODData = [
     leaves: [],
   },
   {
-    uid: "entc",
-    password: "entc@123",
-    fname: "entc",
-    lname: "HOD",
+    uid: "salmankhan",
+    password: "salman@123",
+    fname: "salman",
+    lname: "khan",
     phone_number: 7888866666,
     department: "ENTC",
     address: "Pune, Maharashtra",

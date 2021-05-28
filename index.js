@@ -19,11 +19,14 @@ app.use(express.static(path.join(__dirname, "public"))); // To Send Css Files
 
 //================================================
 mongoose
-  .connect("mongodb://localhost:27017/leave_management_system", {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useCreateIndex: true,
-  })
+  .connect(
+    "mongodb+srv://rohith:Redi@123@leavemanagementsystem.lysvs.mongodb.net/leave_management_system?retryWrites=true&w=majority",
+    {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+      useCreateIndex: true,
+    }
+  )
   .then(() =>
     console.log("Connection to DB leave_management_system successfull")
   )
@@ -176,11 +179,11 @@ app.put("/hod/:id/deny/:leave_id", async (req, res) => {
 const port = process.env.PORT || 5000;
 
 app.listen(port, () => {
-  console.log("Server Running on port : 3000");
+  console.log("Server Running on port : 5000");
 });
 
 function validate(username, password) {
-  if (username.length < 2) {
+  if (username.length < 6) {
     return "Your username must be at least 8 characters";
   }
   if (username == null || username == "") {
