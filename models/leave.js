@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const leaveSchema = mongoose.Schema({
   leave_type: {
     type: String,
-    enum: ["sick", "casual", "maternity"],
+    enum: ["sick", "casual", "maternity", "onduty", "other"],
   },
   from: {
     type: Date,
