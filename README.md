@@ -3,11 +3,13 @@
 
 Login Crendentials :
 
-professor:
+professor
+
 id : rohithreddy
 password : rohith@123
 
-hod : 
+hod 
+
 id : varundhawan
 password : varun@123
 
